@@ -1,0 +1,45 @@
+# Big thanks and love for using my plugins! ^^
+
+#|--------------------------------------------------------------------------------------------------------------------|#
+# Plugin: CustomRecipes
+# Author: https://www.mc-market.org/members/89497/
+# Description: Simple plugin for creating custom shaped in-game recipes.
+# Dependencies:
+#   -> PLJRApi
+#|--------------------------------------------------------------------------------------------------------------------|#
+
+##########################\
+# Crafting Recipes Setup ###############################################################\
+########################## Here, you can create new custom recipes for Crafting Table. # \
+                         ###############################################################  \
+crafting-recipes:
+  emerald_sword:
+    shape:
+      row-1: " E "
+      row-2: " E "
+      row-3: " S "
+    ingredients:
+      E: "EMERALD"
+      S: "STICK"
+    result:
+      type: "DIAMOND_SWORD"
+      name: "§aEmerald Sword"
+      amount: 1
+      lore:
+        - "§eThe almighty Emerald Sword!"
+      enchantments:
+        - "DAMAGE_ALL:5"
+        - "DURABILITY:3"
+#|--------------------------------------------------------------------------------------------------------------------|#
+
+#########################\
+# Furnace Recipes Setup ########################################################\
+######################### Here, you can create new custom recipes for Furnace. # \
+                        ########################################################  \
+furnace-recipes:
+  molten_iron_helmet:
+    ingredient: "IRON_HELMET"
+    result:
+      type: "IRON_INGOT"
+      amount: 4
+#|--------------------------------------------------------------------------------------------------------------------|#

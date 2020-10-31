@@ -1,0 +1,6 @@
+name: CustomRecipes
+version: ${project.version}
+main: me.pljr.customrecipes.CustomRecipes
+api-version: 1.13
+authors: [9hx]
+description: Simple plugin for creating custom shaped in-game recipes.
