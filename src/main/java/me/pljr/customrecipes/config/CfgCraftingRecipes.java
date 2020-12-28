@@ -1,7 +1,7 @@
 package me.pljr.customrecipes.config;
 
 import me.pljr.customrecipes.objects.CraftingRecipe;
-import me.pljr.pljrapi.managers.ConfigManager;
+import me.pljr.pljrapispigot.managers.ConfigManager;
 import org.bukkit.Material;
 import org.bukkit.configuration.ConfigurationSection;
 import org.bukkit.inventory.ItemStack;
