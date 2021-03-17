@@ -1,5 +1,6 @@
 package me.pljr.customrecipes.config;
 
+import lombok.Getter;
 import me.pljr.customrecipes.objects.CraftingRecipe;
 import me.pljr.pljrapispigot.managers.ConfigManager;
 import org.bukkit.Material;
@@ -8,11 +9,12 @@ import org.bukkit.inventory.ItemStack;
 
 import java.util.HashMap;
 
-public class CfgCraftingRecipes {
-    public static HashMap<String, CraftingRecipe> recipes;
+@Getter
+public class CraftingRecipes {
+    private final HashMap<String, CraftingRecipe> recipes;
 
-    public static void load(ConfigManager config){
-        CfgCraftingRecipes.recipes = new HashMap<>();
+    public CraftingRecipes(ConfigManager config){
+        recipes = new HashMap<>();
         ConfigurationSection recipes = config.getConfigurationSection("crafting-recipes");
         if (recipes != null){
             for (String recipe : recipes.getKeys(false)){
@@ -25,7 +27,7 @@ public class CfgCraftingRecipes {
                     ingredients.put(ingredient.charAt(0), config.getMaterial("crafting-recipes."+recipe+".ingredients."+ingredient));
                 }
                 ItemStack result = config.getSimpleItemStack("crafting-recipes."+recipe+".result");
-                CfgCraftingRecipes.recipes.put(recipe, new CraftingRecipe(row1, row2, row3, ingredients, result));
+                this.recipes.put(recipe, new CraftingRecipe(row1, row2, row3, ingredients, result));
             }
         }
     }
